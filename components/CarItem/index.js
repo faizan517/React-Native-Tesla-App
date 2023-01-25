@@ -5,19 +5,19 @@ import styles from "./styles";
 
 export default function CarItem(props) {
 
-  const {image,title,subTitle} =props
+  const {image,name,tagline} =props.car;
 
 
   return (
     <View style={styles.carContainer}>
       <ImageBackground
-        source={require("../../assets/ModelX.jpeg")}
+        source={image}
         style={styles.image}
       />
 
       <View style={styles.titles}>
-        <Text style={styles.title}>Hello World</Text>
-        <Text style={styles.subTitle}>Hello World</Text>
+        <Text style={styles.title}>{name}</Text>
+        <Text style={styles.subTitle}>{tagline}</Text>
       </View>
 
       <View style={styles.buttonContainer}>
